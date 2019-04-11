@@ -1,0 +1,61 @@
+{
+	"name": "covwatcher-client",
+	"version": "1.0.0",
+	"description": "Client for the covwatcher server. Used to upload reports.",
+	"main": "dist/index.js",
+	"bin": {
+		"covwatcher": "bin/covwatch"
+	},
+	"scripts": {
+		"test": "jest",
+		"coverage": "jest --coverage && codecov --token=866bf6d9-4fe7-4570-b7f3-cd2c4633c091",
+		"release": "npm version minor --no-git-tag-version",
+		"build": "babel lib -d dist"
+	},
+	"author": "Florian Riedel <low@fochlac.com>",
+	"license": "ISC",
+	"dependencies": {
+		"axios": "^0.18.0",
+		"body-parser": "^1.18.3",
+		"compression": "^1.7.4",
+		"cookie-parser": "^1.4.4",
+		"express": "^4.16.4",
+		"filehound": "^1.17.0",
+		"minimist": "^1.2.0"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.4.3",
+		"@babel/core": "^7.4.3",
+		"@babel/plugin-proposal-async-generator-functions": "^7.2.0",
+		"@babel/plugin-proposal-class-properties": "^7.4.0",
+		"@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+		"@babel/plugin-proposal-optional-catch-binding": "^7.2.0",
+		"@babel/preset-env": "^7.4.3",
+		"codecov": "^3.3.0",
+		"jest": "^24.7.1",
+		"sinon": "^7.3.1"
+	},
+	"jest": {
+		"coverageDirectory": "./coverage/",
+		"coveragePathIgnorePatterns": [
+			"<rootDir>/node_modules/"
+		],
+		"testMatch": [
+			"**/__tests__/*-test.js"
+		],
+		"testEnvironment": "node",
+		"collectCoverageFrom": [
+			"lib/**/*.js"
+		],
+		"moduleFileExtensions": [
+			"js"
+		],
+		"testPathIgnorePatterns": [
+			"node_modules",
+			"dist"
+		],
+		"moduleDirectories": [
+			"node_modules"
+		]
+	}
+}
