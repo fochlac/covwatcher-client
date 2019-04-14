@@ -8,7 +8,7 @@
 	},
 	"scripts": {
 		"test": "jest",
-		"coverage": "jest --coverage && codecov --token=866bf6d9-4fe7-4570-b7f3-cd2c4633c091",
+		"coverage": "jest --coverage && codecov --token=d431fed9-233e-471b-b287-a793d4d099bb",
 		"release": "npm version minor --no-git-tag-version",
 		"build": "babel lib -d dist"
 	},
