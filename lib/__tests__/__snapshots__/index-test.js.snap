@@ -1,0 +1,259 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`upload should find test report and upload it to the server 1`] = `
+Array [
+  "/test/path/for/this/test/",
+]
+`;
+
+exports[`upload should find test report and upload it to the server 2`] = `
+Array [
+  Array [
+    "http://test.server.com:12345//api/branch",
+    Object {
+      "name": "name",
+      "report": "testreport",
+      "repository": Object {
+        "project": "project",
+        "repo": "repo",
+        "type": "users",
+      },
+    },
+  ],
+]
+`;
+
+exports[`upload should go into catch on error 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error uploading coverage report:
+",
+      true,
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if invalid target 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --target is neither 'branch' nor 'pullrequest'.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if invalid type 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --type is required. Please define the type of the repository. Can be either 'users' or 'project'.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing name 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --name is required. Please set the branchname / the id of the pullrequest.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing project 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --project is required. Please define the name of the project or the user the repository belongs to.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing repo 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --repo is required. Please define the name of the repository.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing repo 2`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --repo is required. Please define the name of the repository.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing server 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --server is required. Please define the url of the server.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing target 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --target is neither 'branch' nor 'pullrequest'.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print error and quit if missing type 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Error in command line arguments: --type is required. Please define the type of the repository. Can be either 'users' or 'project'.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should print help and quit on -h 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "	-n	--name		[name]			name of the branch or if this is a pullrequest its id
+",
+      "	-t	--target	[target]		branchtype, can be \\"branch\\" or \\"pullrequest\\"
+",
+      "	-y	--type		[type]			repository type, can be \\"users\\" or \\"project\\"
+",
+      "	-p	--project	[projectname]	name of the project or user the repository is part of
+",
+      "	-r	--repo		[repo]			name of the repository
+",
+      "	-s	--server	[server]		full url to the server running covwatcher. defaults to \\"localhost:51337\\"
+",
+      "	-d	--directory	[directory]		full path to the coverage report
+",
+      "	-b	--bail						repository type, can be \\"users\\" or \\"project\\"
+",
+      "	-h	--help						repository type, can be \\"users\\" or \\"project\\"
+",
+    ],
+    Array [
+      "Error in command line arguments: --target is neither 'branch' nor 'pullrequest'.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should use passed in report and upload it to the server 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Successfully uploaded coverage report.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should use passed in report and upload it to the server 2`] = `
+Array [
+  Array [
+    "http://test.server.com:12345//api/branch",
+    Object {
+      "name": "name",
+      "report": "testreport",
+      "repository": Object {
+        "project": "project",
+        "repo": "repo",
+        "type": "users",
+      },
+    },
+  ],
+]
+`;

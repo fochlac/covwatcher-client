@@ -1,0 +1,32 @@
+version: 2
+jobs:
+    build:
+        working_directory: /home/circleci/covwatcher-client
+        docker:
+            - image: circleci/node:latest-browsers
+        steps:
+            - checkout
+            - run:
+                  name: update-npm
+                  command: 'sudo npm install -g npm@latest'
+            - restore_cache:
+                  key: dependency-cache-{{ checksum "package.json" }}
+            - run:
+                  name: install-npm
+                  command: npm install
+            - save_cache:
+                  key: dependency-cache-{{ checksum "package.json" }}
+                  paths:
+                      - ./node_modules
+            - run:
+                  name: test
+                  command: npm run coverage
+            - run:
+                  name: build
+                  command: npm run build
+            - run:
+                  name: setup publish path
+                  command: echo "//registry.npmjs.org/:_authToken=$NPM_TOKEN" >> ./.npmrc
+            - run:
+                  name: publish
+                  command: node ./scripts/publishOnVersionUpdate
