@@ -30,8 +30,8 @@ The client is available as executeable `covwatcher` and can upload reports via c
 |    -r     |    --repo    | name of the repository                                |         COVWATCHER_REPO |    \*    |
 |    -s     |   --server   | full url to the server running covwatcher             |       COVWATCHER_SERVER |    \*    |
 |    -d     | --directory  | full path to the coverage report                      |       COVWATCHER_REPORT |          |
-|    -b     |    --bail    | repository type, can be "users" or "project"          |                         |          |
-|    -h     |    --help    | repository type, can be "users" or "project"          |                         |          |
+|    -b     |    --bail    | whether to return nonnull status on failure           |                         |          |
+|    -h     |    --help    | usage information							           |                         |          |
 
 The command `covwatcher -n "master" -t "branch" -y "users" -p "Fochlac" -r "covwatcher" -s "http://covwatcher.fochlac.com"` will start a search for the closest coverage file and upload it to the specified server. The search will start from the location of this package, so it should always be installed in the specific repository you want searched or you should provide the full path to the report via the `-d` option.
 
