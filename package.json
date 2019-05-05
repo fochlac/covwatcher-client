@@ -15,9 +15,9 @@
 	"author": "Florian Riedel <low@fochlac.com>",
 	"license": "ISC",
 	"dependencies": {
-		"axios": "^0.18.0",
 		"filehound": "^1.17.0",
-		"minimist": "^1.2.0"
+		"minimist": "^1.2.0",
+		"node-fetch": "^2.5.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.4.3",
