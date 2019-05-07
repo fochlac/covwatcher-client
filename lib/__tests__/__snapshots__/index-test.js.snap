@@ -11,15 +11,7 @@ Array [
   Array [
     "http://test.server.com:12345//api/branch",
     Object {
-      "body": Object {
-        "name": "name",
-        "report": "testreport",
-        "repository": Object {
-          "project": "project",
-          "repo": "repo",
-          "type": "users",
-        },
-      },
+      "body": "{\\"name\\":\\"name\\",\\"repository\\":{\\"type\\":\\"users\\",\\"project\\":\\"project\\",\\"repo\\":\\"repo\\"},\\"report\\":\\"testreport\\"}",
       "headers": Object {
         "Content-Type": "application/json",
       },
@@ -252,15 +244,7 @@ Array [
   Array [
     "http://test.server.com:12345//api/branch",
     Object {
-      "body": Object {
-        "name": "name",
-        "report": "testreport",
-        "repository": Object {
-          "project": "project",
-          "repo": "repo",
-          "type": "users",
-        },
-      },
+      "body": "{\\"name\\":\\"name\\",\\"repository\\":{\\"type\\":\\"users\\",\\"project\\":\\"project\\",\\"repo\\":\\"repo\\"},\\"report\\":\\"testreport\\"}",
       "headers": Object {
         "Content-Type": "application/json",
       },
