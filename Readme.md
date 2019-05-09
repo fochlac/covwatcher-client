@@ -30,6 +30,7 @@ The client is available as executeable `covwatcher` and can upload reports via c
 |    -r     |    --repo    | name of the repository                                |         COVWATCHER_REPO |    \*    |
 |    -s     |   --server   | full url to the server running covwatcher             |       COVWATCHER_SERVER |    \*    |
 |    -d     | --directory  | full path to the coverage report                      |       COVWATCHER_REPORT |          |
+|    -l     | --lcov  	   | full url to the server hosting the lcov report        |       					 |          |
 |    -b     |    --bail    | whether to return nonnull status on failure           |                         |          |
 |    -h     |    --help    | usage information							           |                         |          |
 
