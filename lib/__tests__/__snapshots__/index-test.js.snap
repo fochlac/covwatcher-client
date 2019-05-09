@@ -31,6 +31,37 @@ Array [
 ]
 `;
 
+exports[`upload should also pass task = true prop to fetch 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "Successfully uploaded coverage report.",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`upload should also pass task = true prop to fetch 2`] = `
+Array [
+  Array [
+    "http://test.server.com:12345//api/branch",
+    Object {
+      "body": "{\\"name\\":\\"name\\",\\"repository\\":{\\"type\\":\\"users\\",\\"project\\":\\"project\\",\\"repo\\":\\"repo\\"},\\"report\\":\\"testreport\\",\\"lcov\\":\\"http://test.server.com:12345/lcovReport/\\",\\"task\\":true}",
+      "headers": Object {
+        "Content-Type": "application/json",
+      },
+      "method": "post",
+    },
+  ],
+]
+`;
+
 exports[`upload should find test report and upload it to the server 1`] = `
 Array [
   "/test/path/for/this/test/",
@@ -232,11 +263,13 @@ exports[`upload should print help and quit on -h 1`] = `
 ",
       "	-d	--directory	[directory]		full path to the coverage report
 ",
-      "	-b	--bail						repository type, can be \\"users\\" or \\"project\\"
+      "	-l	--lcov		[server]		url to a hosted lcov report
 ",
-      "	-l	--lcov						url to a hosted lcov report
+      "	-a	--task						whether to create a task if the diff coverage is low
 ",
-      "	-h	--help						repository type, can be \\"users\\" or \\"project\\"
+      "	-b	--bail						whether to throw on error\\"
+",
+      "	-h	--help						print help
 ",
     ],
     Array [
